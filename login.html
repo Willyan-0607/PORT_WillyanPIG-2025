@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-size: 400% 400%;
+            /* Cores do Kamen Rider Double: Preto (Cyclone) e Verde (Joker) */
+            background-image: linear-gradient(135deg, #2c2c2c, #0d0d0d, #03b04c, #007730, #2c2c2c);
+            animation: gradient-animado 15s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        @keyframes gradient-animado {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0); 
+            padding: 40px;
+            border-radius: 10px;
+            /* Borda alterada para azul */
+            border: 2px solid rgba(0, 0, 255, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .login-container:hover {
+            /* Borda alterada para azul no hover */
+            border-color: #0000ff;
+            /* Sombra alterada para azul no hover */
+            box-shadow: 0 8px 30px rgba(0, 0, 255, 0.3);
+            transform: scale(1.03); 
+        }
+
+        h3 {
+            margin-bottom: 25px;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 700;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .input-group {
+            display: flex;
+            margin-bottom: 20px; /* Increased margin for better spacing */
+            position: relative;
+            
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            /* Borda alterada para azul no foco */
+            border-color: #06abe6;
+            /* Sombra alterada para azul no foco */
+            box-shadow: 0 0 5px rgba(0, 0, 255, 0.25);
+        }
+
+        .input-group input::placeholder {
+            color: #aaa;
+        }
+
+        .input-group label {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+        
+        .input-group input:focus + label,
+        .input-group input:not(:placeholder-shown) + label {
+            top: -10px; /* Adjusted position */
+            left: 10px;
+            font-size: 12px;
+            /* Cor da label alterada para azul */
+            color: #06abe6;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 0 5px;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 12px;
+            /* Cor de fundo do botão alterada para azul */
+            background-color: #06abe6;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .login-button:hover {
+            /* Cor do botão alterada para um azul mais escuro no hover */
+            background-color: #058ac7;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h3>LOGIN</h3>
+        <form>
+            <div class="input-group">
+                <input type="text" placeholder=" " id="login">
+                <label for="login">Login</label>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder=" " id="senha">
+                <label for="senha">Senha</label>
+            </div>
+            <button class="login-button" onclick="logar(); return false;">Entrar</button>
+        </form>
+    </div>
+    <script>
+        function logar() {
+            var login = document.getElementById("login").value;
+            var senha = document.getElementById("senha").value;
+            if (login == "admin" && senha == "admin") {
+                alert("Sucesso");
+                location.href = "index.html";
+            } else {
+                alert("Usuário ou senha inválida");
+            }
+        }
+    </script>
+</body>
+</html>

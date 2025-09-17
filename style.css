@@ -1,0 +1,316 @@
+:root {
+    --bg-color: #080808;
+    --second-bg-color: #131313;
+    --text-color: white;
+    --main-color: #00ffee;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: var(--primaria);
+    color: var(--claro);
+}
+
+.header {
+    z-index: 1;
+    background: linear-gradient(-45deg, #23d5ab, #00abf0, #081b29);
+    background-size: 400% 400%;
+    animation: animate 10s ease infinite;
+}
+
+
+
+
+.navegacao {
+    display: flex;
+    /* Utiliza flexbox para organizar os itens */
+    justify-content: space-between;
+    /* Espaça os elementos horizontalmente */
+    align-items: center;
+    /* Alinha verticalmente ao centro */
+    padding: 20px 50px;
+    /* Espaçamento interno do navbar */
+    background-color: #111;
+    /* Cor de fundo do navbar */
+    border-bottom: 2px solid #0ff;
+    /* Borda inferior azul */
+    position: sticky;
+    /* Navbar fixa ao topo ao rolar a página */
+    top: 0;
+    /* Posição fixa no topo */
+    z-index: 1000;
+    /* Mantém o navbar acima de outros elementos */
+}
+
+.container-box {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    margin: 25% auto;
+    justify-content: center;
+
+}
+
+
+.box {
+    width: 250px;
+    margin: 0 10px;
+    box-shadow: 0 0 20px var(--main-color);
+    transition: 1s;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.box img {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+
+
+}
+
+
+.foto-perfil {
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+    border: 4px solid var(--vidro);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 3rem;
+}
+
+.menu-link:hover {
+    background: #fff;
+    color: #000;
+    border-radius: 5px;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem;
+}
+
+.menu-link::after {
+    content: "";
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    transition: 0.5s ease;
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}
+
+.cabecalho {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    color: var(--primaria);
+    font-weight: bold;
+    margin: 20px;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.cabecalho-sub {
+    font-size: 2rem;
+    color: var(--claro);
+}
+
+.sobre {
+    padding: 6rem 2rem;
+
+}
+
+.sobre-titulo {
+    font-size: 3rem;
+    color: var(--claro);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sobre-caixa {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.sobre-caixa:hover {
+    box-shadow: 0 10px 20px var(--main-color);
+    transform: translate(-10px) scale(1.03);
+}
+
+.sobre-paragrafo {
+    font-size: 1.2rem;
+}
+
+.objetivos {
+    padding: 6rem 2rem;
+}
+
+.objetivos-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.objetivos-card:hover {
+    box-shadow: 0 10px 20px var(--main-color);
+    transform: translate(-10px) scale(1.03);
+}
+
+.objetivos-caixa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.objetivos-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--vidro);
+    overflow: hidden;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.info-objetivos {
+    margin-bottom: 5px;
+
+}
+
+.caixa-texto {
+    padding: 1.5rem;
+
+}
+
+.paragrafo-objetivos {
+    color: rgba(226, 232, 240, 0.8);
+    line-height: 1.25rem;
+}
+
+/*Rodape*/
+footer {
+    background-color: #111;
+    padding: 25px;
+    text-align: center;
+    color: #777;
+    border-top: 2px solid var(--main-color);
+}
+
+/* Estilo para a div que contém os links, para que os elementos fiquem alinhados */
+footer .footer-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Estilo para o link do GitHub */
+footer .github-link {   
+    color: #fff;
+    font-size: 30px;
+    transition: transform 0.3s ease, color 0.3s ease; /* Adiciona transição para o crescimento e a cor */
+}
+
+/* Efeito de hover no link do GitHub */
+footer .github-link:hover {
+    color: var(--main-color); /* Cor azul claro ao passar o mouse */
+    transform: scale(1.2); /* Aumenta o tamanho do ícone em 20% */
+}
+
+/* Estilo para o link de 'Contato' */
+footer a {
+    color: var(--main-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin: 0 10px;
+}
+
+/* Efeito de hover para o link de 'Contato' */
+footer a:hover {
+    color: var(--main-color);
+    transform: scale(1.1); /* Aumenta o tamanho do texto do link em 10% */
+}
+
+/* Estilo para o parágrafo de direitos autorais */
+footer p {
+    margin: 0;
+}
+
+
+
+
+/*relogio digital*/
+.clock {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.clock span {
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.clock span:not(:last-child)::after {
+    content: ':';
+    color: var(--color-light);
+}
+
+/*setions*/
+
+.sect-ppe{
+     padding: 50px 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo (títulos e imagens) */
+}
+
+.sect-curriculo{
+     padding: 50px 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo (títulos e imagens) */
+}
+

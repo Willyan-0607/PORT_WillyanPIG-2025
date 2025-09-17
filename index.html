@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Wilyan Jairo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="atividades portfolio/w.jpg" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      border: none;
+      outline: none;
+      scroll-behavior: smooth;
+      font-family: "Poppins", sans-serif;
+
+    }
+
+    body {
+      background-color: #000;
+      /* Cor de fundo preta */
+      color: #fff;
+      /* Cor do texto branca */
+      line-height: 1.6;
+      /* Altura da linha para melhor leitura */
+    }
+
+    a {
+      text-decoration: none;
+      /* Remove o sublinhado dos links */
+      color: inherit;
+      /* Faz com que os links herdem a cor do elemento pai */
+    }
+
+    img {
+      display: block;
+      /* Faz a imagem ser um bloco para evitar espaçamento indesejado */
+      max-width: 100%;
+      /* Garante que a imagem não ultrapasse a largura do container */
+    }
+
+    :root {
+      --bg-color: #080808;
+      --second-bg-color: #131313;
+      --text-color: white;
+      --main-color: #00ffee;
+    }
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      /* Flexbox para organizar itens dentro da navbar */
+      gap: 30px;
+      /* Espaçamento entre os itens */
+      font-weight: bold;
+      /* Texto em negrito */
+    }
+
+    .nav-left span {
+      color: #0ff;
+      /* Cor azul nos textos da esquerda da navbar */
+    }
+
+    .nav-right a {
+      color: #0ff;
+      /* Cor azul nos links da direita */
+      padding-bottom: 5px;
+      /* Espaçamento inferior para efeito hover */
+      transition: all 0.3s ease;
+      /* Transição suave para hover */
+    }
+
+    .nav-right a:hover {
+      border-bottom: 2px solid #0ff;
+      /* Adiciona uma linha inferior ao passar o mouse */
+    }
+
+
+
+
+    .hero {
+      display: flex;
+      /* Flexbox para organizar texto e imagem */
+      flex-wrap: wrap;
+      /* Permite que elementos quebrem linha em telas pequenas */
+      justify-content: space-between;
+      /* Espaço entre elementos horizontalmente */
+      align-items: center;
+      /* Alinha verticalmente */
+      padding: 100px 50px;
+      /* Espaçamento interno */
+      gap: 20px;
+      /* Espaçamento entre os elementos */
+    }
+
+    .hero-text {
+      flex: 1 1 300px;
+      /* Flex-grow e flex-shrink com base mínima de 300px */
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      /* Tamanho grande do título */
+      color: #0ff;
+      /* Cor azul */
+      margin-bottom: 10px;
+      /* Espaço abaixo do título */
+    }
+
+    .hero-text p {
+      font-size: 1.5rem;
+      /* Tamanho do subtítulo */
+      color: #ccc;
+      /* Cor cinza claro */
+    }
+
+    .hero-image {
+      flex: 1 1 300px;
+      /* Flexbox para imagem */
+      text-align: center;
+      /* Centraliza a imagem */
+    }
+
+    .hero-image img {
+      width: 300px;
+      /* Largura fixa da imagem */
+      max-width: 80%;
+      /* Máximo de 80% do container */
+      border-radius: 20px;
+      /* Deixa a imagem circular */
+      border: 4px solid #0ff;
+      /* Borda azul */
+      transition: transform 0.3s ease;
+      /* Transição suave para hover */
+      margin-left: 100px;
+    }
+
+    .hero-image img:hover {
+      transform: scale(1.05);
+      /* Aumenta a imagem ao passar o mouse */
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 255, 255, 0.5);
+    }
+
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        /* Coloca os elementos da hero verticalmente em telas pequenas */
+        text-align: center;
+        /* Centraliza texto */
+      }
+
+      .nav-left,
+      .nav-right {
+        gap: 15px;
+        /* Reduz espaço entre itens da navbar em telas pequenas */
+      }
+    }
+
+    .double {
+      flex: 1 1 5px;
+      /* Flexbox para imagem */
+      text-align: center;
+      /* Centraliza a imagem */
+      margin-left: 30px;
+    }
+
+    .ppe {
+
+      margin: auto;
+      height: 600px;
+      width: 800px;
+      justify-content: center;
+    }
+
+    .ppe img:hover{
+       transform: scale(1.05);
+       transition: transform 0.5s ease;
+        /* Aumenta a imagem ao passar o mouse */
+        transform: translateY(-10px);
+         box-shadow: 0 0 30px var(--main-color);
+    }
+
+    .curriculo {
+      margin: auto;
+      height: 400px;
+      width: 400px;
+      justify-content: center;
+    }
+      .curriculo img:hover{
+        transform: scale(1.05);
+        transition: transform 0.5s ease;
+        /* Aumenta a imagem ao passar o mouse */
+        transform: translateY(-10px);
+         box-shadow: 0 0 15px var(--main-color);
+      }
+
+    .gradit {
+      background: linear-gradient(to right, #00ffee, #12da8e, #06abe6, #06abe6, #12da8e, #00ffee);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200%;
+      background-clip: text;
+      display: block;
+      animation: animate-gradient 3s linear infinite;
+    }
+
+
+
+    .title {
+      background: linear-gradient(to right, #00ffee, #12da8e, #06abe6, #06abe6, #12da8e, #00ffee);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200%;
+      background-clip: text;
+      display: block;
+      animation: animate-gradient 3s linear infinite;
+    }
+
+    @keyframes animate-gradient {
+      to {
+        background-position: 200%;
+
+
+      }
+    }
+  </style>
+</head>
+
+
+
+<body>
+  <header>
+    <nav class="navegacao">
+      <div class="nav-left">
+        <span>Sesi</span> <!-- Item esquerdo da navbar -->
+        <span>Senai</span> <!-- Item esquerdo da navbar -->
+      </div>
+
+      <div class="nav-right">
+        <a href="#inicio" class="menu-link">Inicio</a>
+        <a href="#sobre" class="menu-link">Sobre</a>
+        <a href="#objetivos" class="menu-link">Objetivos </a>
+        <a href="#PPE" class="menu-link">PPE</a>
+        <a href="#curriculo" class="menu-link">Curriculo</a>
+        <a href="#Atividades" class="menu-link">Atividades</a>
+        <a href="#Contatos" class="menu-link">Contatos</a>
+    </nav>
+  </header>
+
+
+
+  <div class="clock">
+    <span id="hours">00</span>
+    <span id="minutes">00</span>
+    <span id="seconds">00</span>
+  </div>
+
+
+
+
+
+
+  <section id="inicio" class="hero">
+
+    <div class="hero-text">
+      <h1 class="title">Willyan Jairo</h1> <!-- Nome principal -->
+      <p class="gradit">Orientado por: Cleiton Leal</p> <!-- Subtítulo -->
+    </div>
+    <div class="double">
+      <img src="atividades portfolio/double.png" alt="double">
+    </div>
+    <div class="hero-image">
+      <img src="atividades portfolio/willyan.jpg" alt="Willyan Jairo"> <!-- Imagem de perfil -->
+    </div>
+  </section>
+
+
+
+
+  <section id="sobre" class="sobre">
+    <h2 class="sobre-titulo">Identificação Pessoal</h2>
+    <div class="sobre-caixa">
+      <p class="sobre-paragrafo">
+        Nome: Willyan Jairo Martins da Silva <br>
+        idade: 18 anos <br>
+        Filiação: <br>
+        Mãe: Jéssica Maria da Conceição Martins <br>
+        Pai: Wilson Franscisco da Silva <br>
+        Endereço: Bairro Belo Sul <br>
+        Telefone: (89) 9420 - 5136 <br>
+      </p>
+
+    </div>
+  </section>
+
+
+  <section id="sobre" class="sobre">
+    <h2 class="sobre-titulo">Historia de Vida</h2>
+    <div class="sobre-caixa">
+      <p class="sobre-paragrafo">
+        Meu nome é Willyan Jairo Martins da Silva tenho 18 anos agora estou cursando informatica para internet no senai
+        na 3° série do Ensino Médio, estudo da escola Sesi Wilma Catão Araújo e estudo no Sesi desde o 3° ano do
+        fundamental I. <br>
+        <br>
+
+        Desde de criança não sou muito sociável e sempre gostei de jogos e filmes também gosto de jogar basquete e
+        outros esportes e sempre soube que para alcançar meus objetivos em mente tenho que ter foco, determinação e
+        esforço para realizá-los.
+      </p>
+
+    </div>
+  </section>
+
+
+
+  <section id="sobre" class="sobre">
+    <h2 class="sobre-titulo">Meus objetivos</h2>
+    <div class="sobre-caixa">
+      <p class="sobre-paragrafo">
+        •Desenvolver minhas habilidades e competências, a fim de obter bons resultados nas áreas de conhecimento. <br>
+
+        •Refletir sobre o meu crescimento e progresso durante o ano letivo.
+      </p>
+
+    </div>
+  </section>
+
+  <section id="objetivos" class="objetivos">
+    <h2 class="objetivos-titulo">Projeto de vida</h2>
+    <div class="objetivos-caixa">
+
+      <div class="objetivos-card">
+        <div class="caixa-texto">
+          <h3 class="info-objetivos">Onde estou?</h3>
+          <p class="paagrafo-objetivos">Eu me chamo Willyan Jairo
+            estudo na 3ª Série do Ensino Médio, estou agora me esforçando para conseguir alcançar meus objetivos.</p>
+        </div>
+      </div>
+
+      <div class="objetivos-card">
+        <div class="caixa-texto">
+          <h3 class="info-objetivos">Onde quero chegar?</h3>
+          <p class="paagrafo-objetivos">Eu pretendo fazer uma faculdade de ADS no IFPI para entrar no mundo do trabalho
+            e atuar na área de tecnologia.</p>
+        </div>
+      </div>
+
+      <div class="objetivos-card">
+        <div class="caixa-texto">
+          <h3 class="info-objetivos">Como chegarei la?</h3>
+          <p class="paagrafo-objetivos">Ghegarei lá com muito esforço e dedicação nos meus estudos seguindo meu
+            cronograma de estudo, não perdendo o foco para alcançar o meu objetivo.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  </div>
+
+
+
+  <section class="sect-ppe" id="PPE">
+    <div class="ppe">
+      <img src="atividades portfolio/PPE.png" alt="ppe">
+    </div>
+  </section>
+
+
+  <section class="sect-curriculo" id="curriculo">
+    <div class="curriculo">
+      <img src="atividades portfolio/curriculowilly.png" alt="curriculo">
+    </div>
+  </section>
+
+
+
+
+  <section class="Atividades-box" id="Atividades">
+    <div class="container-box">
+      <div class="box">
+        <a href="Linguagens.html">
+          <img src="c:\Users\USER\Pictures\linguagens.png" alt="Linguagens">
+        </a>
+      </div>
+
+      <div class="box">
+        <a href="humanas.html">
+          <img src="c:\Users\USER\Pictures\humanas.png" alt="humanas">
+        </a>
+      </div>
+
+      <div class="box">
+        <a href="natureza.html">
+          <img src="c:\Users\USER\Pictures\natureza.png" alt="natureza">
+        </a>
+      </div>
+
+      <div class="box">
+        <a href="matematica.html">
+          <img src="c:\Users\USER\Pictures\matematica.png" alt="matematica">
+        </a>
+      </div>
+
+      <div class="box">
+        <a href="senai.html">
+          <img src="c:\Users\USER\Pictures\senai.png" alt="Senai">
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- Footer -->
+  <section id="Contatos">
+    <footer>
+      <div class="footer-links">
+        <a href="https://github.com/Willyan-0607/Portf-lio" target="_blank" class="github-link">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/w_jiraya0607/" target="_blank" class="github-link">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+
+
+      &copy; 2025 Willyan Jairo | <a href="#Contatos">Contato</a> <!-- Direitos autorais e link de contato -->
+    </footer>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    const hoursElement = document.getElementById('hours')
+    const minuteElemnet = document.getElementById('minutes')
+    const secondsElement = document.getElementById('seconds')
+
+    function newTime() {
+
+      const date = new Date();
+
+      const hours = date.getHours()
+      const minutes = date.getMinutes()
+      const seconds = date.getSeconds()
+
+      hoursElement.textContent = fixTime(hours)
+      minuteElemnet.textContent = fixTime(minutes)
+      secondsElement.textContent = fixTime(seconds)
+
+    }
+
+    function fixTime(time) {
+      return time < 10 ? '0' + time : time
+    }
+
+    newTime()
+    setInterval(newTime, 1000)
+  </script>
+</body>
+
+</html>
