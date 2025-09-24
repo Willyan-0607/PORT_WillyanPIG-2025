@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,159 +14,203 @@
             text-decoration: none;
             border: none;
             outline: none;
-            scroll-behavior: smooth;
             font-family: "Poppins", sans-serif;
         }
 
         :root {
-            --bg-color: #080808;
-            --second-bg-color: #131313;
-            --text-color: white;
-            --main-color: #00ffee;
-            --tree-color: green;
+            --bg-color: #0a0a0a;
+            --panel-color: rgba(19, 19, 19, 0.8);
+            --text-color: #fff;
+            --accent: #00ffee;
+            --accent-soft: rgba(0, 255, 238, 0.4);
+            --card-radius: 14px;
+            --shadow: 0 0 20px rgba(0, 255, 238, 0.25);
         }
+
 
         body {
-            background-color: #000;
-            /* Cor de fundo preta */
-            color: #fff;
-            /* Cor do texto branca */
-            line-height: 1.6;
-            /* Altura da linha para melhor leitura */
+            background: linear-gradient(135deg, #000 0%, #111 100%);
+            color: var(--text-color);
+            line-height: 1.7;
+            padding: 40px 20px;
         }
 
+        /* ===== TÍTULOS ===== */
+        header h1 {
+            font-size: 3rem;
+            color: var(--accent);
+            text-align: center;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        header p {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 40px;
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 0 auto 70px;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #e0e0e0;
+        }
+
+        section hr {
+            border: none;
+            height: 2px;
+            width: 60%;
+            margin: 0 auto 40px;
+            background: linear-gradient(to right, transparent, var(--accent), transparent);
+        }
+
+        /* ===== GRID DE IMAGENS ===== */
+        .deveres-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+            padding: 0 10px;
+        }
+
+        /* ===== CARD DE IMAGEM ===== */
         .deveres {
-            width: 250px;
-            margin: 0 10px;
-            box-shadow: 0 0 20px var(--tree-color);
-            transition: 1s;
-        }
-
-        .deveres:hover {
-            transform: scale(1.1);
-            z-index: 2;
+            background: var(--panel-color);
+            border-radius: var(--card-radius);
+            overflow: hidden;
+            backdrop-filter: blur(8px);
+            box-shadow: var(--shadow);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
         }
 
         .deveres img {
             display: block;
             width: 100%;
-            border-radius: 5px;
+            height: auto;
+            border-radius: var(--card-radius);
+            transition: transform 0.4s ease;
         }
 
-        .deveres-container {
-            width: 90%;
-            display: flex;
-            flex-direction: row;
-            padding: 20px;
-            justify-content: center;
-
+        .deveres:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 0 35px var(--accent-soft);
         }
 
-        h1 {
-            font-size: 3.5rem;
-            color: var(--main-color);
-            font-weight: bold;
-            margin: 20px;
-            text-align: center;
+        .deveres:hover img {
+            transform: scale(1.05);
         }
 
-        h2 {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 20px;
-            text-align: center;
-        }
+        /* ===== RESPONSIVO ===== */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.3rem;
+            }
 
-        hr {
-            border: 2px solid;
-            color: var(--main-color);
+            section h2 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
+
 <body>
-    
-<section>
+
+
+    <header>
         <h1>Natureza</h1>
+        <p>Portfólio de atividades por Eixo</p>
+    </header>
+    <main>
+        <section>
+            <h2>Eixo 1</h2>
+            <hr>
+            <div class="deveres-container">
+                <div class="deveres">
+                    <img src="atividades portfolio/gasnatural.png" alt="">
+                </div>
+                <div class="deveres">
+                    <img src="atividades portfolio/classificacaocadeiascarbonicas.png" alt="">
+                </div>
+                <div class="deveres">
+                    <img src="atividades portfolio/magnetismo.png" alt="">
+                </div>
+                <div class="deveres">
+                    <img src="atividades portfolio/listamagnentismo.png" alt="">
+                </div>
+            </div>
+        </section>
 
-        <h2>Eixo 1</h2>
-        <hr>
-        <div class="deveres-container">
-            <div class="deveres">
-                <img src="atividades portfolio/gasnatural.png" alt="">
-            </div>
-            <div class="deveres">
-                <img src="atividades portfolio/classificacaocadeiascarbonicas.png" alt="">
-            </div>
-            <div class="deveres">
-                <img src="atividades portfolio/magnetismo.png" alt="">
-            </div>
-            <div class="deveres">
-                <img src="atividades portfolio/listamagnentismo.png" alt="">
-            </div>
-        </div>
-    </section>
+        <section>
+            <hr>
+            <h2>Eixo 2</h2>
 
-    <section>
-        <hr>
-        <h2>Eixo 2</h2>
+            <div class="deveres-container">
+                <div class="deveres">
+                    <img src="atividades portfolio/equipemotoreletrico.png" alt="">
+                </div>
+                <div class="deveres">
+                    <img src="28.png" alt="">
+                </div>
+                <div class="deveres">
+                    <img src="atividades portfolio/27.png" alt="">
+                </div>
+                <div class="deveres">
+                    <img src="atividades portfolio/29.png" alt="">
+                </div>
+            </div>
+        </section>
 
-        <div class="deveres-container">
-            <div class="deveres">
-                <img src="atividades portfolio/equipemotoreletrico.png" alt="">
-            </div>
-            <div class="deveres">
-                <img src="28.png" alt="">
-            </div>
-            <div class="deveres">
-                <img src="atividades portfolio/27.png" alt="">
-            </div>
-            <div class="deveres">
-                <img src="atividades portfolio/29.png" alt="">
-            </div>
-        </div>
-    </section>
+        <section>
+            <hr>
+            <h2>Eixo 3</h2>
 
-    <section>
-        <hr>
-        <h2>Eixo 3</h2>
+            <div class="deveres-container">
+                <div class="deveres">
+                    <img src="atividades portfolio/radioative.png" alt="">
+                </div>
+                <div class="deveres">
+                    <img src="atividades portfolio/linhatempo.png" alt="">
+                </div>
+                <div class="deveres">
+                    <img src="atividades portfolio/quanticamoderna.png" alt="">
+                </div>
+                <div class="deveres">
+                    <img src="atividades portfolio/listafisica-1.png" alt="">
+                </div>
 
-        <div class="deveres-container">
-            <div class="deveres">
-                <img src="atividades portfolio/radioative.png" alt="">
             </div>
-            <div class="deveres">
-                <img src="atividades portfolio/linhatempo.png" alt="">
-            </div>
-            <div class="deveres">
-                <img src="atividades portfolio/quanticamoderna.png" alt="">
-            </div>
-            <div class="deveres">
-                <img src="atividades portfolio/listafisica-1.png" alt="">
-            </div>
-            
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <hr>
-        <h2>Eixo 4</h2>
+        <section>
+            <hr>
+            <h2>Eixo 4</h2>
 
-        <div class="deveres-container">
-            <div class="deveres">
-                <img src="img/image.png" alt="">
+            <div class="deveres-container">
+                <div class="deveres">
+                    <img src="img/image.png" alt="">
+                </div>
+                <div class="deveres">
+                    <img src="image copy 7.png" alt="">
+                </div>
+                <div class="deveres">
+                    <img src="image copy 7.png" alt="">
+                </div>
+                <div class="deveres">
+                    <img src="image copy 7.png" alt="">
+                </div>
             </div>
-            <div class="deveres">
-                <img src="image copy 7.png" alt="">
-            </div>
-            <div class="deveres">
-                <img src="image copy 7.png" alt="">
-            </div>
-            <div class="deveres">
-                <img src="image copy 7.png" alt="">
-            </div>
-        </div>
-    </section>
-
+        </section>
+    </main>
 
 </body>
+
 </html>
