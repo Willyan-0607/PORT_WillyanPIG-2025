@@ -7,11 +7,11 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
         
-        body {
+       body {
             font-family: 'Roboto', sans-serif;
             background-size: 400% 400%;
-            /* Cores do Kamen Rider Double: Preto (Cyclone) e Verde (Joker) */
-            background-image: linear-gradient(135deg, #2c2c2c, #0d0d0d, #03b04c, #007730, #2c2c2c);
+            /* Ajustado para Preto e Branco (escala de cinza) */
+            background-image: linear-gradient(135deg, #1a1a1a, #0d0d0d, #4d4d4d, #333333, #1a1a1a);
             animation: gradient-animado 15s ease infinite;
             display: flex;
             justify-content: center;
@@ -31,19 +31,19 @@
             background-color: rgba(255, 255, 255, 0); 
             padding: 40px;
             border-radius: 10px;
-            /* Borda alterada para azul */
-            border: 2px solid rgba(0, 0, 255, 0.3);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            /* Borda ajustada para cinza/branco */
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
             width: 350px;
             text-align: center;
             transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
         }
 
         .login-container:hover {
-            /* Borda alterada para azul no hover */
-            border-color: #0000ff;
-            /* Sombra alterada para azul no hover */
-            box-shadow: 0 8px 30px rgba(0, 0, 255, 0.3);
+            /* Borda ajustada para preto/cinza escuro no hover */
+            border-color: #ffffff;
+            /* Sombra ajustada para cinza claro no hover */
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
             transform: scale(1.03); 
         }
 
@@ -52,12 +52,12 @@
             color: #fff;
             font-size: 24px;
             font-weight: 700;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
         }
 
         .input-group {
             display: flex;
-            margin-bottom: 20px; /* Increased margin for better spacing */
+            margin-bottom: 20px; 
             position: relative;
             
         }
@@ -68,16 +68,17 @@
             border: 1px solid #ddd;
             border-radius: 6px;
             font-size: 16px;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.95);
             transition: all 0.3s ease;
+            color: #333; /* Cor do texto no input */
         }
 
         .input-group input:focus {
             outline: none;
-            /* Borda alterada para azul no foco */
-            border-color: #06abe6;
-            /* Sombra alterada para azul no foco */
-            box-shadow: 0 0 5px rgba(0, 0, 255, 0.25);
+            /* Borda ajustada para preto no foco */
+            border-color: #000000;
+            /* Sombra ajustada para cinza no foco */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
         }
 
         .input-group input::placeholder {
@@ -96,20 +97,20 @@
         
         .input-group input:focus + label,
         .input-group input:not(:placeholder-shown) + label {
-            top: -10px; /* Adjusted position */
+            top: -10px; 
             left: 10px;
             font-size: 12px;
-            /* Cor da label alterada para azul */
-            color: #06abe6;
-            background-color: rgba(255, 255, 255, 0.9);
+            /* Cor da label ajustada para cinza escuro/preto */
+            color: #000000;
+            background-color: rgba(255, 255, 255, 0.95);
             padding: 0 5px;
         }
 
         .login-button {
             width: 100%;
             padding: 12px;
-            /* Cor de fundo do botão alterada para azul */
-            background-color: #06abe6;
+            /* Cor de fundo do botão ajustada para preto */
+            background-color: #000000;
             color: #fff;
             border: none;
             border-radius: 6px;
@@ -120,8 +121,8 @@
         }
 
         .login-button:hover {
-            /* Cor do botão alterada para um azul mais escuro no hover */
-            background-color: #058ac7;
+            /* Cor do botão ajustada para um cinza escuro no hover */
+            background-color: #333333;
             transform: translateY(-2px);
         }
     </style>
