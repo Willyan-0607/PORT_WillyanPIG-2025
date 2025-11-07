@@ -38,23 +38,14 @@ body {
 
 .navegacao {
     display: flex;
-    /* Utiliza flexbox para organizar os itens */
     justify-content: space-between;
-    /* Espaça os elementos horizontalmente */
     align-items: center;
-    /* Alinha verticalmente ao centro */
     padding: 20px 50px;
-    /* Espaçamento interno do navbar */
     background-color: #111;
-    /* Cor de fundo do navbar */
     border-bottom: 2px solid #0ff;
-    /* Borda inferior azul */
     position: sticky;
-    /* Navbar fixa ao topo ao rolar a página */
     top: 0;
-    /* Posição fixa no topo */
     z-index: 1000;
-    /* Mantém o navbar acima de outros elementos */
 }
 
 .container-box {
@@ -240,7 +231,7 @@ body {
     line-height: 1.25rem;
 }
 
-/*Rodape*/
+
 footer {
     background-color: #111;
     padding: 25px;
@@ -249,40 +240,39 @@ footer {
     border-top: 2px solid var(--main-color);
 }
 
-/* Estilo para a div que contém os links, para que os elementos fiquem alinhados */
+
 footer .footer-links {
     display: flex;
     justify-content: center;
     margin-top: 10px;
 }
 
-/* Estilo para o link do GitHub */
+
 footer .github-link {   
     color: #fff;
     font-size: 30px;
-    transition: transform 0.3s ease, color 0.3s ease; /* Adiciona transição para o crescimento e a cor */
+    transition: transform 0.3s ease, color 0.3s ease; 
 }
 
-/* Efeito de hover no link do GitHub */
+
 footer .github-link:hover {
-    color: var(--main-color); /* Cor azul claro ao passar o mouse */
-    transform: scale(1.2); /* Aumenta o tamanho do ícone em 20% */
+    color: var(--main-color); 
+    transform: scale(1.2); 
 }
 
-/* Estilo para o link de 'Contato' */
+
 footer a {
     color: var(--main-color);
     transition: color 0.3s ease, transform 0.3s ease;
     margin: 0 10px;
 }
 
-/* Efeito de hover para o link de 'Contato' */
 footer a:hover {
     color: var(--main-color);
-    transform: scale(1.1); /* Aumenta o tamanho do texto do link em 10% */
+    transform: scale(1.1); 
 }
 
-/* Estilo para o parágrafo de direitos autorais */
+
 footer p {
     margin: 0;
 }
@@ -290,7 +280,7 @@ footer p {
 
 
 
-/*relogio digital*/
+
 .clock {
     display: flex;
     gap: 30px;
@@ -315,22 +305,22 @@ span {
     color: var(--color-light);
 }
 
-/*setions*/
+
 
 .sect-ppe{
-     padding: 50px 20px; /* Espaçamento interno */
-    text-align: center; /* Centraliza o conteúdo (títulos e imagens) */
+     padding: 50px 20px; 
+    text-align: center; 
 }
 
 .sect-curriculo{
-     padding: 50px 20px; /* Espaçamento interno */
-    text-align: center; /* Centraliza o conteúdo (títulos e imagens) */
+     padding: 50px 20px;
+    text-align: center; 
 }
 
 
 
 
-/* Cards dos Anexos */
+
 
 
    .caixa-card {
@@ -401,7 +391,7 @@ span {
       line-height: 1.5;
       color: var(--main-color);
     }
-/* ATIVIDADES ESCOLHIDAS — VISUAL ESCURO */
+
 .atividades-escolhidas {
   background-color: #0a0a0a;
   padding: 80px 20px;
@@ -426,7 +416,7 @@ span {
 }
 
 .atividade-card {
-  background-color: #111; /* fundo escuro igual às referências */
+  background-color: #111;
   color: #fff;
   padding: 2rem;
   border-radius: 20px;
@@ -486,7 +476,7 @@ span {
   box-shadow: 0 0 15px var(--main-color);
 }
 
-/* REFERÊNCIAS */
+
 .referencias {
   background-color: #0a0a0a;
   text-align: center;
