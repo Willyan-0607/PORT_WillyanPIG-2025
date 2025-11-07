@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humanas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            font-family: "Poppins", sans-serif;
+        }
+
+        :root {
+            --bg-color: #0a0a0a;
+            --panel-color: rgba(19, 19, 19, 0.8);
+            --text-color: #fff;
+            --accent: #00ffee;
+            --accent-soft: rgba(0, 255, 238, 0.4);
+            --card-radius: 14px;
+            --shadow: 0 0 20px rgba(0, 255, 238, 0.25);
+        }
+
+        body {
+            background: linear-gradient(135deg, #000 0%, #111 100%);
+            color: var(--text-color);
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: var(--accent);
+            text-align: center;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        header p {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 40px;
+        }
+
+        section {
+            max-width: 1400px;
+            margin: 0 auto 70px;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #e0e0e0;
+        }
+
+        section hr {
+            border: none;
+            height: 2px;
+            width: 60%;
+            margin: 0 auto 40px;
+            background: linear-gradient(to right, transparent, var(--accent), transparent);
+        }
+
+        /* ===== GRID ===== */
+        .deveres-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 45px;
+            padding: 0 10px;
+            justify-items: center;
+        }
+
+        /* ===== CARD ===== */
+        .deveres {
+            background: var(--panel-color);
+            border-radius: var(--card-radius);
+            overflow: hidden;
+            backdrop-filter: blur(8px);
+            box-shadow: var(--shadow);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .deveres img {
+            display: block;
+            max-width: 650px;
+            /* 🔹 bem maior agora */
+            max-height: 420px;
+            /* 🔹 altura proporcional */
+            width: 100%;
+            height: auto;
+            border-radius: var(--card-radius);
+            transition: transform 0.4s ease;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+
+        .deveres:hover {
+            transform: translateY(-8px) scale(1.04);
+            box-shadow: 0 0 40px var(--accent-soft);
+        }
+
+        .deveres:hover img {
+            transform: scale(1.06);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.3rem;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+
+            .deveres img {
+                max-width: 100%;
+                max-height: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Humanas</h1>
+        <p>Portfólio de atividades por Eixo</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Eixo 1</h2>
+            <hr>
+            <div class="deveres-container">
+                <div class="deveres">
+                    <img src="img/arabiasaudita HUMANAS 1.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <hr>
+            <h2>Eixo 2</h2>
+            <div class="deveres-container">
+                <div class="deveres">
+                    <img src="img/26 HUMANAS 2.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <hr>
+            <h2>Eixo 3</h2>
+            <div class="deveres-container">
+                <div class="deveres">
+                    <img src="img/constituição1967 HUMANAS 3.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <hr>
+            <h2>Eixo 4</h2>
+            <div class="deveres-container">
+                <div class="deveres">
+                    <img src="img/analiseletradamusica HUMANAS 4.jpg" alt="lingua">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
