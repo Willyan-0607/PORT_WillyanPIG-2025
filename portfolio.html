@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Wilyan Jairo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="atividades portfolio/w.jpg" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      border: none;
+      outline: none;
+      scroll-behavior: smooth;
+      font-family: "Poppins", sans-serif;
+      transition: all 0.3s ease-in-out;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    :root {
+      --bg-color: #080808;
+      --second-bg-color: #131313;
+      --text-color: white;
+      --main-color: #00ffee;
+    }
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      gap: 30px;
+      font-weight: bold;
+    }
+
+    .nav-left span {
+      color: #0ff;
+    }
+
+    .nav-right a {
+      color: #0ff;
+      padding-bottom: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-right a:hover {
+      border-bottom: 2px solid #0ff;
+    }
+
+
+
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 100px 50px;
+      gap: 20px;
+    }
+
+    .hero-text {
+      flex: 1 1 300px;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      color: #0ff;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 1.5rem;
+      color: #ccc;
+    }
+
+    .hero-image {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+
+    .hero-image img {
+      width: 300px;
+      max-width: 80%;
+      border-radius: 20px;
+      border: 4px solid #0ff;
+      transition: transform 0.3s ease;
+      margin-left: 100px;
+    }
+
+    .hero-image img:hover {
+      transform: scale(1.05);
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 255, 255, 0.5);
+    }
+
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .nav-left,
+      .nav-right {
+        gap: 15px;
+      }
+    }
+
+    .double {
+      flex: 1 1 5px;
+      text-align: center;
+      margin-left: 30px;
+    }
+
+    .ppe {
+
+      margin: auto;
+      height: 600px;
+      width: 800px;
+      justify-content: center;
+    }
+
+    .ppe img:hover {
+      transform: scale(1.05);
+      transition: transform 0.5s ease;
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px var(--main-color);
+    }
+
+    .curriculo {
+      margin: auto;
+      height: 400px;
+      width: 400px;
+      justify-content: center;
+    }
+
+    .curriculo img:hover {
+      transform: scale(1.05);
+      transition: transform 0.5s ease;
+      transform: translateY(-10px);
+      box-shadow: 0 0 15px var(--main-color);
+    }
+
+    .gradit {
+      background: linear-gradient(to right, #00ffee, #12da8e, #06abe6, #06abe6, #12da8e, #00ffee);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200%;
+      background-clip: text;
+      display: block;
+      animation: animate-gradient 3s linear infinite;
+    }
+
+
+
+    .title {
+      background: linear-gradient(to right, #00ffee, #12da8e, #06abe6, #06abe6, #12da8e, #00ffee);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200%;
+      background-clip: text;
+      display: block;
+      animation: animate-gradient 3s linear infinite;
+    }
+
+    
+
+   
+
+    @keyframes animate-gradient {
+      to {
+        background-position: 200%;
+
+
+      }
+    }
+  </style>
+</head>
+
+
+
+<body>
+  <header>
+    <nav class="navegacao">
+      <div class="nav-left">
+        <span>Sesi</span>
+        <span>Senai</span>
+      </div>
+
+      <div class="nav-right">
+        <a href="#inicio" class="menu-link">Inicio</a>
+        <a href="#sobre" class="menu-link">Sobre</a>
+        <a href="#objetivos" class="menu-link">Objetivos </a>
+        <a href="#PPE" class="menu-link">PPE</a>
+        <a href="#curriculo" class="menu-link">Curriculo</a>
+        <a href="#ConsFinais" class="menu-link">Cons.Finais</a>
+        <a href="#Atividades" class="menu-link">Atividades</a>
+        <a href="#Contatos" class="menu-link">Contatos</a>
+    </nav>
+  </header>
+
+  
+
+  <div class="clock">
+    <span id="hours">00</span>
+    <span id="minutes">00</span>
+    <span id="seconds">00</span>
+  </div>
+
+
+
+
+
+
+
+
+  <section id="inicio" class="hero">
+
+    <div class="hero-text">
+      <h1 class="title">Willyan Jairo</h1>
+      <p class="gradit">Orientado por: Cleiton Leal</p>
+    </div>
+    <div class="double">
+      <img src="atividades portfolio/gif.gif" alt="double">
+    </div>
+    <div class="hero-image">
+      <img src="atividades portfolio/willyan.jpg" alt="Willyan Jairo">
+    </div>
+  </section>
+
+
+
+
+  <section id="sobre" class="sobre">
+    <h2 class="sobre-titulo">Identificação Pessoal</h2>
+    <div class="sobre-caixa">
+      <p class="sobre-paragrafo">
+        Nome: Willyan Jairo Martins da Silva <br>
+        idade: 18 anos <br>
+        Filiação: <br>
+        Mãe: Jéssica Maria da Conceição Martins <br>
+        Pai: Wilson Franscisco da Silva <br>
+        Endereço: Bairro Belo Sul <br>
+        Telefone: (89) 9420 - 5136 <br>
+      </p>
+
+    </div>
+  </section>
+
+
+  <section id="sobre" class="sobre">
+    <h2 class="sobre-titulo">Historia de Vida</h2>
+    <div class="sobre-caixa">
+      <p class="sobre-paragrafo">
+        Meu nome é Willyan Jairo Martins da Silva tenho 18 anos agora estou cursando informatica para internet no senai
+        na 3° série do Ensino Médio, estudo da escola Sesi Wilma Catão Araújo e estudo no Sesi desde o 3° ano do
+        fundamental I. <br>
+        <br>
+
+        Desde de criança não sou muito sociável e sempre gostei de jogos e filmes também gosto de jogar basquete e
+        outros esportes e sempre soube que para alcançar meus objetivos em mente tenho que ter foco, determinação e
+        esforço para realizá-los.
+      </p>
+
+    </div>
+  </section>
+
+
+
+  <section id="sobre" class="sobre">
+    <h2 class="sobre-titulo">Meus objetivos</h2>
+    <div class="sobre-caixa">
+      <p class="sobre-paragrafo">
+        •Desenvolver minhas habilidades e competências, a fim de obter bons resultados nas áreas de conhecimento. <br>
+
+        •Refletir sobre o meu crescimento e progresso durante o ano letivo.
+      </p>
+
+    </div>
+  </section>
+
+  <section id="objetivos" class="objetivos">
+    <h2 class="objetivos-titulo">Projeto de vida</h2>
+    <div class="objetivos-caixa">
+
+      <div class="objetivos-card">
+        <div class="caixa-texto">
+          <h3 class="info-objetivos">Onde estou?</h3>
+          <p class="paagrafo-objetivos">Eu me chamo Willyan Jairo
+            estudo na 3ª Série do Ensino Médio, estou agora me esforçando para conseguir alcançar meus objetivos.</p>
+        </div>
+      </div>
+
+      <div class="objetivos-card">
+        <div class="caixa-texto">
+          <h3 class="info-objetivos">Onde quero chegar?</h3>
+          <p class="paagrafo-objetivos">Eu pretendo fazer uma faculdade de ADS no IFPI para entrar no mundo do trabalho
+            e atuar na área de tecnologia.</p>
+        </div>
+      </div>
+
+      <div class="objetivos-card">
+        <div class="caixa-texto">
+          <h3 class="info-objetivos">Como chegarei la?</h3>
+          <p class="paagrafo-objetivos">Ghegarei lá com muito esforço e dedicação nos meus estudos seguindo meu
+            cronograma de estudo, não perdendo o foco para alcançar o meu objetivo.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  </div>
+
+
+
+  <section class="sect-ppe" id="PPE">
+    <div class="ppe">
+      <img src="atividades portfolio/PPE.png" alt="ppe">
+    </div>
+  </section>
+
+
+  <section class="sect-curriculo" id="curriculo">
+    <h2 class="objetivos-titulo">Curriculo</h2>
+    <div class="curriculo">
+      <img src="atividades portfolio/curriculowilly.png" alt="curriculo">
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <section class="Atividades-box" id="Atividades">  
+    <div class="container-box">
+      <div class="box">
+        <a href="Linguagens.html">
+          <img src="atividades portfolio/capalinguagens.png" alt="Linguagens">
+        </a>
+      </div>
+
+      <div class="box">
+        <a href="humanas.html">
+          <img src="atividades portfolio/capahumanas.png" alt="humanas">
+        </a>
+      </div>
+
+      <div class="box">
+        <a href="natureza.html">
+          <img src="atividades portfolio/capanatureza.png" alt="natureza">
+        </a>
+      </div>
+
+      <div class="box">
+        <a href="matematica.html">
+          <img src="atividades portfolio/capamatematica.png" alt="matematica">
+        </a>
+      </div>
+
+      <div class="box">
+        <a href="senai.html">
+          <img src="atividades portfolio/capasenai.png" alt="Senai">
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="AtividadesEscolhidas" class="atividades-escolhidas">
+    <h2 class="sobre-titulo">Atividades Escolhidas</h2>
+    <div class="cards-container">
+      <div class="atividade-card">
+        <i class="fa-solid fa-language icon"></i>
+        <h3>Linguagens</h3>
+        <p>Comunicação, escrita e expressão cultural.</p>
+        <a href="Atividades escolhidas/linguagens.html" class="btn">Ver Mais</a>
+      </div>
+
+      <div class="atividade-card">
+        <i class="fa-solid fa-landmark icon"></i>
+        <h3>Humanas</h3>
+        <p>História, geografia, filosofia e sociologia.</p>
+        <a href="Atividades escolhidas/humanas.html" class="btn">Ver Mais</a>
+      </div>
+
+
+      <div class="atividade-card">
+        <i class="fa-solid fa-flask icon"></i>
+        <h3>Natureza</h3>
+        <p>Ciências naturais, biologia, física e química.</p>
+        <a href="Atividades escolhidas/natureza.html" class="btn">Ver Mais</a>
+      </div>
+
+      <div class="atividade-card">
+        <i class="fa-solid fa-square-root-variable icon"></i>
+        <h3>Matemática</h3>
+        <p>Raciocínio lógico, álgebra e estatística.</p>
+        <a href="Atividades escolhidas/matematica.html" class="btn">Ver Mais</a>
+      </div>
+
+      <div class="atividade-card">
+        <i class="fa-solid fa-gears icon"></i>
+        <h3>Senai</h3>
+        <p>Conhecimentos técnicos e práticos aplicados.</p>
+        <a href="Atividades escolhidas/senai.html" class="btn">Ver Mais</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="ConsFinais" class="sobre">
+    <h2 class="sobre-titulo">Anexos</h2>
+    <div class="caixa-card">
+      <div class="cards-cartas">
+        <img src="atividades portfolio/siteamostracientifica.png" alt="Imagem 1">
+        <div class="card-descricao">
+          <h3>Amostra Cientifica</h3>
+          <p>Participei como monitor do grupo na Amostra Científica, auxiliando no projeto sobre Escola Segura,
+            promovendo segurança nas escolas.</p>
+        </div>
+      </div>
+  </section>
+
+
+
+  <section id="ConsFinais" class="sobre">
+    <h2 class="sobre-titulo">Considerações finais</h2>
+    <div class="sobre-caixa">
+      <p class="sobre-paragrafo">
+        Este portfólio representa não apenas um registro do meu percurso, mas também um instrumento de aprendizado e
+        crescimento pessoal. Neste sentido, ao longo do desenvolvimento deste trabalho, gostaria de ressaltar a
+        importância de todo o processo de construção. Durante o projeto, pude aprimorar minhas habilidades e adquirir
+        novos conhecimentos. <br>
+        <br>
+        O portfólio é uma etapa importante em minha jornada e estou confiante de que os aprendizados obtidos serão
+        fundamentais para os desafios futuros.
+      </p>
+
+    </div>
+  </section>
+
+
+
+  <section id="Referencias" class="referencias">
+    <h2 class="sobre-titulo">Referências</h2>
+    <div class="referencias-container">
+
+      <div class="ref-card">
+        <img src="atividades portfolio/brasil escola.png" alt="Brasil Escola">
+        <h3>Brasil Escola</h3>
+        <a href="https://brasilescola.uol.com.br/" target="_blank" class="ref-link">Visitar</a>
+      </div>
+
+      <div class="ref-card">
+        <img src="atividades portfolio/mundo educacao.jpg" alt="Mundo Educação">
+        <h3>Mundo Educação</h3>
+        <a href="https://mundoeducacao.uol.com.br/" target="_blank" class="ref-link">Visitar</a>
+      </div>
+
+      <div class="ref-card">
+        <img src="atividades portfolio/VSCODE.png" alt="VS Code">
+        <h3>Visual Studio Code</h3>
+        <a href="https://code.visualstudio.com/" target="_blank" class="ref-link">Visitar</a>
+      </div>
+
+      <div class="ref-card">
+        <img src="atividades portfolio/GITHUB.png" alt="GitHub">
+        <h3>GitHub</h3>
+        <a href="https://github.com/" target="_blank" class="ref-link">Visitar</a>
+      </div>
+
+      <div class="ref-card">
+        <img src="atividades portfolio/CHATGPT.b1d6d110-9d93-441f-ac20-2e04fd7dfe3c" alt="Mundo Educação">
+        <h3>ChatGPT</h3>
+        <a href="https://chatgpt.com/" target="_blank" class="ref-link">Visitar</a>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <section id="Contatos">
+    <footer>
+      <div class="footer-links">
+        <a href="https://github.com/Willyan-0607" target="_blank" class="github-link">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/w_jiraya0607/" target="_blank" class="github-link">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+
+
+      &copy; 2025 Willyan Jairo | <a href="#Contatos">Contato</a> contato
+    </footer>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    const hoursElement = document.getElementById('hours')
+    const minuteElemnet = document.getElementById('minutes')
+    const secondsElement = document.getElementById('seconds')
+
+    function newTime() {
+
+      const date = new Date();
+
+      const hours = date.getHours()
+      const minutes = date.getMinutes()
+      const seconds = date.getSeconds()
+
+      hoursElement.textContent = fixTime(hours)
+      minuteElemnet.textContent = fixTime(minutes)
+      secondsElement.textContent = fixTime(seconds)
+
+    }
+
+    function fixTime(time) {
+      return time < 10 ? '0' + time : time
+    }
+
+    newTime()
+    setInterval(newTime, 1000)
+  </script>
+</body>
+
+</html>
