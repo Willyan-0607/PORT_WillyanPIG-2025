@@ -557,3 +557,56 @@ span {
   background-color: #00c8cc;
   transform: scale(1.05);
 }
+
+
+
+  .conteiner-card {
+            display: flex;
+            gap: 25px;
+        }
+
+        .cards-cartas {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+
+        .cards-cartas img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .4s ease;
+        }
+
+        .cards-cartas:hover img {
+            transform: scale(1.1);
+            filter: brightness(40%);
+        }
+
+        .cards-descricao {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            color: white;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: .4s ease;
+            font-size: 16px;
+        }
+
+        .cards-cartas:hover .cards-descricao {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .titulo-card {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
